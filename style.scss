@@ -1,0 +1,113 @@
+// Reset some default styles for the page
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+// Navbar styles
+.navbar {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                position: relative; // Added for positioning
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: #ffc107;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #1f2969;
+                    z-index: -1;
+                    transform: scaleX(0); // Initially hidden
+                    transform-origin: right;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover::before {
+                    transform: scaleX(1); // Display on hover
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+}
+
+// Social media icons styles
+.social-icons {
+    text-align: left;
+    padding: 10px;
+    a {
+        display: inline-block;
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 24px;
+        color: #1f2969;
+        transition: color 0.3s ease;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: #ffc107;
+        }
+    }
+}
+
+// Hero section styles
+.hero {
+    text-align: center;
+    background-image: url('Images/birthday.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 100vh; // Ensure the hero section covers the entire viewport height
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        h3 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 18px;
+            margin: 0 0 20px 0;
+        }
+        .rsvp {
+            button {
+                background-color: #1f2969;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                &:hover {
+                    background-color: #ffc107;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+``
